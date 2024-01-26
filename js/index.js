@@ -1,4 +1,4 @@
-import axios from "axios"
+
 
 const username = document.querySelector(".username");
 const phone = document.querySelector(".phone");
@@ -21,6 +21,35 @@ submit.addEventListener("click", async(event)=> {
             place: place.value,
             data: date.value
         }
+
+        let options = {
+            method: 'POST',
+            headers: {
+                'Content-Type':
+                    'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(data)
+        }
+         
+        // Fake api for making post requests
+        let fetchRes = fetch(
+            "http://localhost:8000/api/v1/users",
+            options);
+        fetchRes.then(res =>
+            res.json()).then(d => {
+                console.log(d)
+            })
+        
+
+// let fetchRes = fetch(
+//     "http://localhost:8000/api/v1/users");
+         
+//     // FetchRes is the promise to resolve
+//     // it by using.then() method
+//     fetchRes.then(res =>
+//         res.json()).then(d => {
+//             console.log(d)
+//         })
 
         
     }
