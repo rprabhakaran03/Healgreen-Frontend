@@ -37,7 +37,7 @@ submit.addEventListener("click", async(event)=> {
             options);
         fetchRes.then(res =>
             res.json()).then(d => {
-                console.log(d)
+                alert("Success")
             })
         
 
