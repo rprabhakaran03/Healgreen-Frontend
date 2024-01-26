@@ -33,7 +33,7 @@ submit.addEventListener("click", async(event)=> {
          
         // Fake api for making post requests
         let fetchRes = fetch(
-            "http://localhost:8000/api/v1/users",
+            "https://c81b-51-20-191-17.ngrok-free.app/api/v1/users",
             options);
         fetchRes.then(res =>
             res.json()).then(d => {
