@@ -19,7 +19,7 @@ submit.addEventListener("click", async(event)=> {
             phone: phone.value,
             email: email.value,
             place: place.value,
-            data: date.value
+            date: date.value
         }
 
         let options = {
